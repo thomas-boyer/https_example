@@ -1,3 +1,18 @@
-let https = require("https");
+const https = require("https");
 
-console.log("Heyooo");
+const options =
+{
+  host: 'www.example.org',
+  path: '/'
+};
+
+const callback = function()
+{
+  console.log('In response handler callback!');
+}
+
+console.log('About to make request');
+
+https.request(options, callback).end();
+
+console.log('Request made');

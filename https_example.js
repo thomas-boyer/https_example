@@ -6,9 +6,10 @@ const options =
   path: '/'
 };
 
-const callback = function()
+const callback = function(response)
 {
   console.log('In response handler callback!');
+  console.log('Response: ', response);
 }
 
 console.log('About to make request');
